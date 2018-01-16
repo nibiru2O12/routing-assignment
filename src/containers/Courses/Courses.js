@@ -12,13 +12,13 @@ class Courses extends Component {
         ]
     }
 
-    render () {
 
+    render () {
         //const {url} = this.props.match;
         
         const courses = this.state.courses.map( course => {
             return (
-                    <NavLink to={ '/course/' + course.id } key={course.id}>
+                    <NavLink to={ '/course/' + course.id + '/' + course.title } key={course.id}>
                         <article className="Course" key={course.id}>
                             {course.title}
                         </article>
