@@ -2,21 +2,12 @@ import React, { Component } from 'react';
 
 class Course extends Component {
 
-    state = {
-        id:null,title:null
-    }
-
-    componentDidMount(){
-        const {id,title} = this.props.match.params;
-        this.setState({id,title});
-    }
-
-
     render () {
+        const {id,title} = this.props.course;
         return (
             <div>
-                <h1>{this.state.title}</h1>
-                <p>You selected the Course with ID: {this.state.id}</p>
+                <h1>{title}</h1>
+                <p>You selected the Course with ID: {id}</p>
             </div>
         );
     }

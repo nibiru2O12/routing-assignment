@@ -14,8 +14,6 @@ class App extends Component {
           <Switch>
             <Route path="/users" component={Users}/>
             <Route path="/courses" component={Courses}/>
-            <Route path="/course/:id/:title" component={Course}/>
-            <Redirect from='/' to='/courses' />
           </Switch>
         </Layout>
       </BrowserRouter>
